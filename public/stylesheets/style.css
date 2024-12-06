@@ -1,0 +1,102 @@
+body{
+    background-color:rgb(207, 197, 197);
+}
+.container{
+    margin-top:10px;
+    margin-left:10px;
+    margin-right:60px;
+    margin-bottom:40px;
+    display:flex;
+    padding :4px;
+    background-color:whitesmoke;
+    border-radius:10px;
+    width: 80vw;
+    justify-content: center;
+
+}
+.header{
+    font-family:Geneva, Tahoma, sans-serif;
+    padding-bottom:16px;
+}
+.fields{
+    padding-left:5px;
+}
+.button{
+    display:flex;
+    margin:40px 40px;
+
+}
+#btn{
+    padding:4px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border:none;
+    margin:10px 40px;
+    color:white;
+    background-color: rgb(55, 38, 242);
+    border-radius:10px;
+}
+.input1,.input2,.input3,.input4{
+    width:300px;
+    height:20px;
+    border:none;
+    border-color: brown;
+    margin:10px 0px;
+
+}
+/* input{
+    border:none;
+} */
+input:hover{
+    border:2px solid rgb(47, 81, 194);
+    border-radius: 3px;
+    border:none;
+    box-shadow:0px 0px 10px rgb(223, 62, 44);
+}
+.field1, .field2, .field3,.field4{
+    margin:5px 0px;
+}
+.left{
+    background-color: rgb(190, 255, 255);
+    height:40vw;
+    width:40vw;
+    border-radius:10px;
+    /* border:2px;*/
+    margin-right:10px; 
+}
+.right{
+    background-color: rgb(104, 125, 242);
+    border-radius:10px;
+    height:40vw;
+    width:40vw;
+
+}
+.forget{
+    font-size: medium;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.img{
+    border-radius: 10px;
+    height:610px;
+    width:610px;
+    object-fit:fill;
+}
+.nav{
+    height:60px;
+    width:100vw;
+    background-image: linear-gradient(to right, rgb(245, 54, 54) , rgb(239, 207, 198)); 
+    visibility:hidden;
+}
+.container2{
+    width:18vw;
+    height:40vw;
+    border:none;
+    border-radius:10px;
+    background-color: bisque;
+    margin-top:10px;
+    margin-left:6px;
+    margin-right:6px;
+}
+.main{
+   display:flex;
+   justify-content: center;
+}

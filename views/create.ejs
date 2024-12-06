@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(27, 80, 99);
+        }
+        .pli{
+            border-radius: 10px;
+            border:none;
+            margin:10px;
+
+        }
+        .prob{
+            border-radius: 10px;
+            border:none;
+            margin:10px;
+        }
+        .te{
+            border-radius: 10px;
+            border:none;
+            margin:10px;
+           
+
+        }
+        .sub{
+            display:flex;
+            padding-left:139px;
+            
+            
+        }
+        .plink{
+            height:25px;
+            width:400px;
+            border-radius:10px;
+
+        }
+        .problem{
+            height:25px;
+            min-width:400px;
+            border-radius:10px;
+
+        }
+        .text{
+            height:400px;
+            width:400px;
+            border-radius:10px;
+
+        }
+        .submit{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border:none;
+            margin:10px 40px;
+            color:white;
+            padding:6px 16px;
+            background-color: rgb(48, 11, 233);
+            border-radius:10px;
+
+        }
+        textarea:hover{
+            box-shadow: 0px 0px 10px rgb(24, 44, 228);
+        }
+        input:hover{
+            box-shadow: 0px 0px 10px rgb(24, 44, 228);
+        }
+        .form{
+            display:flex;
+            justify-content: center;
+            background-color: aliceblue;
+            height:700px;
+            width:600px;
+            border-radius: 10px;
+            border:none;
+
+        }
+        .heading{
+            margin:4px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .main{
+            display:grid;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class ="main">
+        <div class="heading">
+            <h1>Create your content below</h1>
+        </div>
+        <div class="form">
+            <form action="/create" method="post">
+                <div class="pli">
+                    <div><p> Problem Link :</p></div>
+                    <input class="plink" type="text" name="link" placeholder="problem-link">
+                </div>
+                <div class="prob">
+                    <div><p> Problem:</p></div>
+                    <input class="problem" type="text" name="problem" placeholder="Enter or Paste problem here">
+                </div>
+                <div class="te">
+                    <div><p> Solution :</p></div>
+                    <textarea class="text" placeholder="Place solution for your problem here" name="solution"></textarea>
+                </div>
+                <div class="sub">
+                    <input class ="submit" type ="submit"  value="submit">
+                </div>
+                
+            </form>
+        </div>
+          
+    </div>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>

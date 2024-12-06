@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(207, 197, 197);
+        }
+        .header{
+            font-family:Geneva, Tahoma, sans-serif;
+            padding-bottom:16px;
+        }
+        .fields{
+            padding-left:5px;
+        }
+        .button{
+            display:flex;
+            justify-content:center;
+            margin:40px 0px;
+        
+        }
+        #btn{
+            padding:4px 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border:none;
+            margin:10px 40px;
+            color:rgb(247, 235, 240);
+            background-color: rgb(134, 188, 199);
+            border-radius:10px;
+            margin-left:10px;
+        }
+        .input1{
+            width:300px;
+            height:20px;
+            border:none;
+            border-color: brown;
+        
+        }
+        input:hover{
+            border:2px solid rgb(47, 81, 194);
+            border-radius: 3px;
+            border:none;
+            box-shadow:0px 0px 10px rgb(187, 62, 62);
+        }
+        .field1, .field2, .field2{
+            margin:10px 0px;
+        }
+        .form{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .left{
+            margin:100px 400px;
+            background-color: rgb(242, 116, 116);
+            height:30vw;
+            width:40vw;
+            border-radius:10px;
+            margin-top:90px; 
+        }
+        .forget{
+            font-size: medium;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <div class ="left">
+        <form class ="form" action="/loggin" method="post">
+            <div class="fields">
+                <div class="header">
+                    <h2>Login page</h5>
+                </div>
+                <div class="field2">
+                    <div >E-mail :</div>
+                    <input class ="input1" type="email", name="email",placeholder="Enter E-mail">
+                </div>
+                <div class="field3">
+                    <div>Password :</div>
+                    <input class ="input1" type="password", name="password",placeholder="Enter Password">
+                </div>
+                <div class="button">
+                    <input id="btn" type="submit" value="login">
+                </div>
+                <div class ="forget">
+                    <span>Don't Have an Account?</span>
+                        <a href="/sign-in">
+                           sign up
+                        </a>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>
