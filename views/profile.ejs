@@ -38,193 +38,142 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Document</title>
     <style>
-        body{
-            background-color: rgb(27, 80, 99);
+        body {
+          font-family: Arial, sans-serif;
+          height: 100vh;
+          background-color: #f4f4f9;
+          margin: 0;
         }
-        .pli{
-            border-radius: 10px;
-            border:none;
-            margin:10px;
-
+        .form-container {
+          background-color: #fff;
+          padding: 20px;
+          margin:20px;
+          border-radius: 5px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          width: 500px;
+          height:570px;
         }
-        .prob{
-            border-radius: 10px;
-            border:none;
-            margin:10px;
+        .form-container h2 {
+          text-align: center;
+          margin-bottom: 20px;
         }
-        .te{
-            border-radius: 10px;
-            border:none;
-            margin:10px;
-           
-
+        .form-container input, .form-container textarea {
+          width: 100%;
+          padding: 10px;
+          margin: 10px 0;
+          border: 1px solid #ccc;
+          border-radius: 5px;
         }
-        .sub{
+        .form-container textarea {
+          min-height: 270px;
+          resize: none;
+        }
+        .form-container button {
+          width: 100%;
+          padding: 10px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .form-container button:hover {
+          background-color: #45a049;
+        }
+        .heading{
+            height:80px;
+            width:1500px;
+            background-image: linear-gradient(to right, rgb(219, 190, 190) ,rgb(241, 36, 36));
+        }
+        .upper{
+            display:grid;
+            max-width:120px;
+        }
+        .lower{
             display:flex;
-            padding-left:139px;
-            
-            
+            width:1500;
+            height:640px;
         }
-        .plink{
-            height:25px;
-            width:400px;
-            border-radius:10px;
-
+        .aside{
+            scroll-behavior: smooth;
+            overflow:scroll;
+            border-radius:6px;
+            margin:20px;
+            width:900px;
+            height:600px;
+            background-color: bisque;
         }
-        .problem{
-            height:25px;
-            min-width:400px;
-            border-radius:10px;
-
-        }
-        .text{
-            resize:none;
-            height:400px;
-            width:400px;
-            border-radius:10px;
-
-        }
-        .submit{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            border:none;
-            margin:10px 40px;
-            color:white;
-            padding:6px 16px;
-            background-color: rgb(48, 11, 233);
-            border-radius:10px;
-
-        }
-        textarea:hover{
-            box-shadow: 0px 0px 10px rgb(24, 44, 228);
-        }
-        input:hover{
-            box-shadow: 0px 0px 10px rgb(24, 44, 228);
-        }
-        .form{
-            display:flex;
-            justify-content: center;
-            background-color: aliceblue;
-            height:685px;
-            width:600px;
-            border-radius: 10px;
-            border:none;
-            margin-right:30px;
-
+        .img1{
+            margin-top:8px;
+            margin-right:4px;
+            margin-left:6px;
+            height:50px;
+            width:50px;
+            border-radius: 6px;
         }
         .heading{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             height:80px;
-        }
-        .main{
-            display:grid;
-            justify-content: center;
-            position:fixed;
-        }
-        .heading{
             display:flex;
-        }
-        .img1{
-            height:70px;
-            width:70px;
-            border-radius: 10px;
-        }
-        .asde{
-            background-color:#e11d48;
-            border-radius: 10px;
-            height: 685px;
-            width:840px;
-            margin-top:85px;
-        }
-        .upper{
-            display:flex;
-        }
-        .ahead{
-            text-align:center;
-        }
-        .hr{
-            box-shadow:2px 0px 10px rgb(55, 50, 50);
-        }
-        .lef{
-            
-            border-radius: 10px;
-            margin-left:630px;
-            height: 685px;
-            width:840px;
         }
         .sol{
             overflow:hidden;
             display:inline-block;
             border-radius: 10px;
             background-color: aliceblue;
-            height:600px;
-            width:600px;
-        }
-        .aupper{
-            height:57px;
-            margin-left:700px;
-        }
-        a{
-            margin-left:10px;
-            margin-right: 10px;
-            text-decoration: none;
-            color:cornflowerblue;
+            margin:4px;
+            width:98%;
+            background-color:#f1e9ea;
+            color:black;
         }
         .prb{
-            margin-left:10px;
-            margin-right: 10px;
+            margin:4px;
+        }
+        a{
+            color:black;
+            text-decoration:none;
         }
     </style>
 </head>
 <body>
     <div class="upper">
-        <div class ="main">
-            <div class="heading">
-                <div><a href="/personal/profile">  <img class="img1" src="<%=user.imgname%>" alt="Profile image"> </a></div>
-                <h1>Welcome,&nbsp;<%= user.name%><h1>
-            </div>
-            <div class="form">
-                <form action="/create" method="post">
-                    <div class="pli">
-                        <div><p> Problem Link :</p></div>
-                        <input class="plink" type="text" name="link" placeholder="problem-link">
-                    </div>
-                    <div class="prob">
-                        <div><p> Problem:</p></div>
-                        <input class="problem" type="text" name="problem" placeholder="Enter or Paste problem here">
-                    </div>
-                    <div class="te">
-                        <div><p> Solution :</p></div>
-                        <textarea class="text" name ="solution" placeholder="Place solution for your problem here"></textarea>
-                    </div>
-                    <div class="sub">
-                        <input class ="submit" type ="submit"  value="submit">
-                    </div>
-                    
-                </form>
-            </div>
-              
+        <div class="heading">
+            <div><a href="/personal/profile">  <img class="img1" src="<%=user.imgname%>" alt="Profile image"> </a></div>
+            <h1>Welcome,&nbsp;<%= user.name%><h1>
         </div>
-        <div class="aside">
-            <div class="aupper">
-               <h1 class="ahead"> your solved problems</h1>
-            </div> 
-            <div class="lef">
-                    <%if(user.problems.length<=0){%>
-                        <center><h1>Zero Problems Solved</h1></center>
-                    <%}else{%>
-                        <% user.problems.reverse().forEach((val)=>{  %>
-                            <div class="sol">
-                                <div>      <h1><a target="_block" href= <%=val.link%> >  <%=val.problem%> </a></h1>     </div>
-                                <div>
-                                    <div class ="prb">
-                                        <%for(const ele of val.solution.split("\n")){%> 
-                                        <div><code><%=ele%></code></div>
-                                        <%}%>
+        <div class="lower">
+            <div class="form-container">
+              <h2>Problem Submission</h2>
+              <form action="/create" method="POST">
+                <label for="filename">File Name:</label>
+                <input type="text" id="filename" name="link" required placeholder="Enter the file name">
+            
+                <label for="problem">Problem:</label>
+                <input type="text" id="problem" name="problem" required placeholder="Enter the problem description">
+            
+                <label for="solution">Solution:</label>
+                <textarea id="solution" name="solution" required placeholder="Enter the solution here"></textarea>
+            
+                <button type="submit">Submit</button>
+              </form>
+            </div>      
+            <div class="aside">
+                        <%if(user.problems.length<=0){%>
+                            <center><h1>Zero Problems Solved</h1></center>
+                        <%}else{%>
+                            <% user.problems.reverse().forEach((val)=>{  %>
+                                <div class="sol">
+                                    <div>      <h1><a target="_block" href= <%=val.link%> >  <%=val.problem%> </a></h1>     </div>
+                                    <div>
+                                        <div class ="prb">
+                                            <%for(const ele of val.solution.split("\n")){%> 
+                                            <div><code><%=ele%></code></div>
+                                            <%}%>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <%}) %>
-                    <%}%>
+                            <%}) %>
+                        <%}%>
             </div>
         </div>
     </div>

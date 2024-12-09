@@ -1,0 +1,189 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>heLLOh2>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/javascripts/script.js" defer ></script>
+</head>
+<body>
+    <div class ="main"></div>
+        <div class="container">
+            <div class ="left">
+                <form action="/submit" method="post">
+                    <div class="fields">
+                        <div class="header">
+                            <h2>Get Started Now</h5>
+                            <p>Enter your credentials to acces your content</p>
+                        </div>
+                        <div class="field1">
+                            <div>Name:</div>
+                            <input class ="input1" type="text" name="name" placeholder="Enter your Name">
+                        </div>
+                        <div class="field2">
+                            <div >E-mail :</div>
+                            <input class ="input1" type="email" name="email" placeholder="Enter E-mail">
+                        </div>
+                        <div class="field3">
+                            <div>Password :</div>
+                            <input class ="input1" type="password" name="password" placeholder="Enter Password">
+                        </div>
+                        <div class="button">
+                            <input id="btn" type="submit" value="submit">
+                        </div>
+                        <div class ="forget">
+                            <span>Have an Account?</span>
+                                <a href="/login">
+                                   Sign in
+                                </a>
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="right">
+               <img class ="img" src="https://media.licdn.com/dms/image/C5612AQEz0hpmCQQ9xA/article-cover_image-shrink_600_2000/0/1645599766887?e=2147483647&v=beta&t=bofydXF-Sf5Q_t5T8xX0Cz1Yuk4uSLma4sUb61WhogY" alt="">
+            </div>
+        </div>
+    </div>
+   
+    <script src="/javascripts/script.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Signup Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #444;
+        }
+
+        .signup-container {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            padding: 2rem;
+            text-align: center;
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            border-color: #a18cd1;
+            box-shadow: 0 0 5px rgba(161, 140, 209, 0.8);
+        }
+
+        .signup-button {
+            width: 100%;
+            padding: 0.8rem;
+            background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .signup-button:hover {
+            opacity: 0.9;
+        }
+
+        .links {
+            margin-top: 1rem;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #a18cd1;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #fbc2eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Signup</h2>
+        <form action="/submit" method="post">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Name" name ="name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email" name= "email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password" name="password" required>
+            </div>
+            <button type="submit" class="signup-button">Sign Up</button>
+        </form>
+        <div class="links">
+            <a href="/login">Already have an account? Login</a>
+        </div>
+    </div>
+</body>
+</html>

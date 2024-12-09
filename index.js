@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname,'public')));
 app.set("view engine","ejs")
 
-
+const PORT=process.env.PORT || 3000;
 const storage=multer.diskStorage({
     destination:function(req,file,cb){
         cb(null,"./public/images/uploads");
@@ -34,12 +34,14 @@ const storage=multer.diskStorage({
 const upload = multer({ storage: storage })
 
 app.get("/sign-in",function(req,res){
-    res.render('index')
+    res.render('sign-in')
+})
+app.get("/homepage",function(req,res){
+    res.render('homepage')
 })
 
-
 app.get("/",function(req,res){
-    res.render('index')
+    res.render('homepage')
 })
 
 
@@ -64,7 +66,7 @@ app.get("/personal/profile",isloggedin,async (req,res)=>{
     let user= await userModel.findOne({email:req.data.email});
     console.log(user);
     console.log(req.data);
-    res.render('personal');
+    res.render('personal',{user});
 })
 app.get("/profile",isloggedin,async (req,res)=>{
     let user= await userModel.findOne({email:req.data.email}).populate('problems');
@@ -81,7 +83,7 @@ app.post("/loggin",async (req,res)=>{
         if(result){
             const token =jwt.sign({email},"secret-key");
             res.cookie("token",token);
-            user.imgname="/images/cat.jpeg";
+            if(!user.imgname) user.imgname="/images/cat.jpeg";
             await user.save();
             res.redirect("/profile");
         }else{
@@ -117,8 +119,10 @@ function isloggedin(req,res,next){
 }
 app.post("/submit",async (req,res)=>{
    let {name,email,password}=req.body;
-   let user=await userModel({email});
-   if(email==="" || name==="" || password==="") return res.redirect("/");
+//    let user=await userModel({email});
+   let user =await userModel.findOne({email:email});
+   if(user) return res.redirect("/sign-in");
+   if(email==="" || name==="" || password==="") return res.redirect("/sign-in");
    bcrypt.genSalt(10,async (err,salt)=>{
          bcrypt.hash(password,salt,async (err,hash)=>{
             let user=await userModel.create({
@@ -128,7 +132,7 @@ app.post("/submit",async (req,res)=>{
             });
             const token =jwt.sign({email},"secret-key");
             res.cookie("token",token);
-            user.imgname="/images/cat.jpeg";
+            if(!user.imgname) user.imgname="/images/cat.jpeg";
             await user.save();
             res.render('profile',{user});
          })
@@ -142,6 +146,6 @@ app.get("/logout",(req,res)=>{
 })
 
 
-app.listen(3000,function(){
-    console.log("its running");
+app.listen(PORT,"192.168.1.39",function(){
+    console.log(`its running on ${PORT}`);
 })

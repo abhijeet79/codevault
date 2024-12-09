@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
-mongoose.connect(`mongodb://127.0.0.1:27017/databaseuser`);
-
+const URI=process.env.URI || `mongodb://127.0.0.1:27017/databaseuser`;
+mongoose.connect(URI);
 const userSchema=mongoose.Schema({
     name:String,
     email:String,

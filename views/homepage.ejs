@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeValut</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 1rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #66a6ff;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #66a6ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #fff;
+            background: linear-gradient(135deg, #66a6ff, #89f7fe);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero button {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #66a6ff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #4d8bff;
+        }
+
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            background-color: #f9f9f9;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .feature h3 {
+            margin-bottom: 1rem;
+            color: #66a6ff;
+        }
+
+        .feature p {
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .footer a {
+            color: #66a6ff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .img1{
+            border-radius:8px;
+        }
+        .span1{
+            margin-top:3px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <span>
+               <img class="img1" src="\images\CodeValut_logo.webp" height="40px" width="40px">
+            </span>
+            <span class="span1">CodeVault</span></div>
+        <div>
+            <a href="/homepage" active>Home</a>
+            <a href="/sign-in">Sign-in</a>
+            <a href="/login">Login</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Our Website</h1>
+        <p>Your one-stop solution for amazing services and support.</p>
+        <!-- <button>Get Started</button> -->
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <a style="text-decoration:none;" href="https://www.interviewbit.com/" target="_block">
+                <h3>Interview Bit</h3>
+                <p style="color:black">
+                    InterviewBit is a learning platform designed to help developers improve their coding and interview skills through structured tutorials and practice problems. It provides personalized tracks and mock interviews tailored to individual goals and job roles.</p>
+            </a>
+        </div>
+        <div class="feature " >
+            <a style="text-decoration:none;" href="https://leetcode.com/" target="_block">
+                <h3>Leetcode</h3>
+                <p style="color:black">
+                    LeetCode is a platform offering a vast collection of coding problems to help programmers prepare for technical interviews. It also provides company-specific interview questions and detailed problem explanations to enhance learning.</p>
+            </a>
+        </div>
+        <div class="feature">
+            <a style="text-decoration:none;" href="https://codeforces.com/" target="_block">
+                <h3>Codeforces</h3>
+                <p style="color:black">Codeforces is a competitive programming platform that hosts contests and provides problem sets for developers to hone their algorithmic skills. It fosters a vibrant community where programmers worldwide collaborate, compete, and grow.</p>
+            </a>
+        </div>
+        <div class="feature">
+            <a style="text-decoration:none;" href="https://www.spoj.com/" target="_block">
+                <h3>SPOJ</h3>
+                <p style="color:black">SPOJ (Sphere Online Judge) is an online platform for competitive programming, offering a vast array of algorithmic problems across diverse categories. It allows users to practice coding and participate in contests while supporting multiple programming languages</p>
+            </a>
+        </div>
+        <div class="feature">
+            <a style="text-decoration:none;" href="https://atcoder.jp/" target="_block">
+                <h3>AtCoder</h3>
+                <p style="color:black">AtCoder is a competitive programming platform that offers various contests, including beginner, regular, and grand contests. It provides a wide range of programming challenges to help users improve their algorithmic problem-solving skills.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 CodeVault. All rights reserved.</p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+    </footer>
+</body>
+</html>

@@ -77,15 +77,12 @@
 <body>
     <div class="profile-card">
         <img src="\images\cat.jpeg" alt="Profile Picture">
-        <h2>John Doe</h2>
-        <p>@johndoe</p>
+        <h2><%=user.name%></h2>
+        <p>@<%=user.name%></p>
         <div class="details">
             <h3>About</h3>
-            <p>Email: johndoe@example.com</p>
-            <p>Location: New York, USA</p>
-            <p>Joined: January 2023</p>
-            <h3>Interests</h3>
-            <p>Photography, Traveling, Coding</p>
+            <p>E-mail :<%=user.email%></p>
+            <p>Username :<%=user.name%></p>
         </div>
         <div class="update-picture">
             <form action="/update-profile-picture" method="post" enctype="multipart/form-data">
