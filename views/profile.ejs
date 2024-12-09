@@ -209,18 +209,22 @@
                <h1 class="ahead"> your solved problems</h1>
             </div> 
             <div class="lef">
-                    <% user.problems.reverse().forEach((val)=>{  %>
-                        <div class="sol">
-                            <div>      <h1><a target="_block" href= <%=val.link%> >  <%=val.problem%> </a></h1>     </div>
-                            <div>
-                                <div class ="prb">
-                                    <%for(const ele of val.solution.split("\n")){%> 
-                                    <div><code><%=ele%></code></div>
-                                    <%}%>
+                    <%if(user.problems.length<=0){%>
+                        <center><h1>Zero Problems Solved</h1></center>
+                    <%}else{%>
+                        <% user.problems.reverse().forEach((val)=>{  %>
+                            <div class="sol">
+                                <div>      <h1><a target="_block" href= <%=val.link%> >  <%=val.problem%> </a></h1>     </div>
+                                <div>
+                                    <div class ="prb">
+                                        <%for(const ele of val.solution.split("\n")){%> 
+                                        <div><code><%=ele%></code></div>
+                                        <%}%>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <%}) %>
+                        <%}) %>
+                    <%}%>
             </div>
         </div>
     </div>

@@ -68,7 +68,6 @@ app.get("/personal/profile",isloggedin,async (req,res)=>{
 })
 app.get("/profile",isloggedin,async (req,res)=>{
     let user= await userModel.findOne({email:req.data.email}).populate('problems');
-    console.log(user.imgname);
     res.render('profile',{user});
 })
 
