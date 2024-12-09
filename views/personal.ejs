@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .profile-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+            padding: 20px;
+        }
+        .profile-card img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+        .profile-card h2 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .profile-card p {
+            margin: 5px 0;
+            color: #777;
+        }
+        .profile-card .details {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .profile-card .details h3 {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .profile-card .details p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .update-picture {
+            margin-top: 15px;
+        }
+        .update-picture label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        .update-picture input[type="file"] {
+            margin-bottom: 10px;
+        }
+        .update-picture button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .update-picture button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img src="\images\cat.jpeg" alt="Profile Picture">
+        <h2>John Doe</h2>
+        <p>@johndoe</p>
+        <div class="details">
+            <h3>About</h3>
+            <p>Email: johndoe@example.com</p>
+            <p>Location: New York, USA</p>
+            <p>Joined: January 2023</p>
+            <h3>Interests</h3>
+            <p>Photography, Traveling, Coding</p>
+        </div>
+        <div class="update-picture">
+            <form action="/update-profile-picture" method="post" enctype="multipart/form-data">
+                <label for="profile-picture">Update Profile Picture</label>
+                <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

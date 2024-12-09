@@ -5,6 +5,8 @@ const userSchema=mongoose.Schema({
     name:String,
     email:String,
     password:String,
+    imgname:String,
+    data:Buffer,
     problems:[
         {
             type:mongoose.Schema.Types.ObjectId,

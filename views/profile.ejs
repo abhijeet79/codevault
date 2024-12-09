@@ -156,12 +156,22 @@
             display:inline-block;
             border-radius: 10px;
             background-color: aliceblue;
-            height:300px;
-            width:300px;
+            height:600px;
+            width:600px;
         }
         .aupper{
             height:57px;
             margin-left:700px;
+        }
+        a{
+            margin-left:10px;
+            margin-right: 10px;
+            text-decoration: none;
+            color:cornflowerblue;
+        }
+        .prb{
+            margin-left:10px;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -169,7 +179,7 @@
     <div class="upper">
         <div class ="main">
             <div class="heading">
-                <div><img class="img1" src="/images/cat.jpeg" alt="Profile image"></div>
+                <div><a href="/personal/profile">  <img class="img1" src="<%=user.imgname%>" alt="Profile image"> </a></div>
                 <h1>Welcome,&nbsp;<%= user.name%><h1>
             </div>
             <div class="form">
@@ -199,18 +209,19 @@
                <h1 class="ahead"> your solved problems</h1>
             </div> 
             <div class="lef">
-                <!-- % if(number===0){%>
-                    <div> Zero Problems Solved</div>
-                % } % -->
-                <% user.problems.reverse().forEach((val)=>{  %>
-                    <div class="sol">
-                        <%console.log(val)%>
-                        <p><%=val.problem%></p>
-                        <p><%=val.solution%></p>
-                    </div>
-                <%}) %>
+                    <% user.problems.reverse().forEach((val)=>{  %>
+                        <div class="sol">
+                            <div>      <h1><a target="_block" href= <%=val.link%> >  <%=val.problem%> </a></h1>     </div>
+                            <div>
+                                <div class ="prb">
+                                    <%for(const ele of val.solution.split("\n")){%> 
+                                    <div><code><%=ele%></code></div>
+                                    <%}%>
+                                </div>
+                            </div>
+                        </div>
+                    <%}) %>
             </div>
-
         </div>
     </div>
     <script src="/javascripts/script.js"></script>
